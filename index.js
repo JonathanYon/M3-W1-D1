@@ -279,6 +279,7 @@ const numToStr = function(a){
 19)
 Create a function that given a phrase returns its acronym, like British Broadcasting Corporation returns BBC
 
+
 */
 
 /* 1) MAX CHAR
@@ -290,26 +291,27 @@ commonly used in the string.
     maxChar("abcccccccd") === "c"
     maxChar("apple 1231111") === "1"
 */
-const mostRepeatedChar = function(str1){
+const repeatChara = function(str1){
     let str = str1;
-    let maxCount = 0;
-    let charRepeated = "";
-    let numOfRepeat = 0;
+    let maxNum = 0;
+    let repeatChar = 0;
+    let char = "";
     for (let i=0; i<str.length; i++){
-        numOfRepeat = 0;
+        repeatChar = 0
         for (let j=0; j<str.length; j++){
             if (str[i]===str[j]){
-                numOfRepeat++
+                repeatChar++
             }
         }
-        if (numOfRepeat>maxCount){
-            charRepeated = str[i]
-            maxCount = numOfRepeat
+        if (repeatChar>maxNum){
+            char = str[i]
+            maxNum=repeatChar
         }
     }
-    return charRepeated
+    return char
 }
-console.log(mostRepeatedChar("csscccchgss"))
+console.log(repeatChara("csshgss"))
+
 /* 2) ANAGRAMS
 
 Check to see if two provided strings are anagrams of each other.
