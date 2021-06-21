@@ -222,12 +222,22 @@ Create a function to create new string with first 3 characters are in lower case
 const firstLowerCase = function(str){
     return str.slice(0, 3).toLowerCase() + str.slice(3).toUpperCase()
  }
- console.log(firstLowerCase("yonatan"))
+//  console.log(firstLowerCase("yonatan"))
  /*
 17)
 
 Create a function to calculate the sum of the two given integers, If the sum is in the range 50..80 return 65 other wise return 80.
-
+*/
+const sumInRange = function(a, b){
+    let sum = a+b;
+    if (sum>50 && sum<80){
+        return 65
+    } else {
+        return 80
+    }
+ }
+ console.log(sumInRange(10, 60))
+ /*
 18)
 
 Create a function to convert a number to a string, the contents of which depend on the number's factors. Follow next example:
