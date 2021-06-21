@@ -92,13 +92,20 @@ function suming (a){
     }
     return sum
 }
-console.log(suming([1, 2, 10]))
+// console.log(suming([1, 2, 10]))
 /*
 
 9)
 Create a function to test whether an array of integers of length 2 contains 1 or a 3. 
 */
-
+function arrCheck (a){
+    if ((a[0]===1 || a[1]===1)||(a[0]===3 || a[1]===3)){
+        return "yes it is"
+    } else {
+        return "No its not"
+    }
+}
+console.log(arrCheck([2, 2]))
 /*
 
 10)
