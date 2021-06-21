@@ -33,7 +33,7 @@ function removing(a, b){
      str = str.slice(0,a) + str.slice(a+1)
      return str
 }
-console.log(removing(4, "hello Js"))
+// console.log(removing(4, "hello Js"))
 /*
 
 4)
@@ -64,7 +64,7 @@ function copies (a, b){
     let str = a
     return str.repeat(b)
 }
-// console.log(copies("Hello", 5))
+// console.log(copies("Hello:", 3))
 /*
 
 7)
@@ -113,21 +113,50 @@ function arrCheck (a){
 Create a function to test whether an array of integers of length 2 does not contain 1 or a 3
 */
 function arrCheck (a){
-    if ((a[0] != 1 || a[1]!=1)||(a[0]!=3 || a[1]!=3)){
-        return "yes it is not here"
+    if ((a[0]===1 || a[1]===1)||(a[0]===3 || a[1]===3)){
+        return "yes it is"
     } else {
-        return "its here"
+        return "No its not"
     }
 }
-// console.log(arrCheck([1, 3]))
+// console.log(arrCheck([1, 2]))
 /*
 11)
 
 Create a function to find the longest string from a given array of strings.
-
+*/
+const longString = function(arr){
+    let str = 0;
+    let strName = null;
+    for (let i=0; i<arr.length; i++){
+        if (arr[i].length > str){
+            str = arr[i].length
+            strName = arr[i]
+        }
+    }
+    return strName;
+}
+// console.log(longString(["yo", "niyo", "Yon"]))
+/*
 12)
 
 Create a function to find the types of a given angle.
+*/
+const angle = function(ab){
+   if (ab >= 0 && ab < 90){
+       return "acute angle"
+   } else if (ab === 90){
+       return "perpendicular angle"
+   } else if (ab > 90 && ab < 180){
+    return "obtuse aangle"
+   } else if (ab === 180){
+    return "stright line"
+   } else if (ab > 180 && ab <= 360){
+    return "reflex angle"
+   } 
+}
+console.log(angle(182))
+/*
 
 Types of angles:
     Acute angle: An angle between 0 and 90 degrees.
