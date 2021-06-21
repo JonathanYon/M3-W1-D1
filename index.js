@@ -85,7 +85,14 @@ function city (a){
 8)
 Create a function to calculate the sum of three elements of a given array of integers of length 3.
 */
-
+function suming (a){
+    let sum = 0;
+    for (let i=0; i<a.length; i++){
+        sum += a[i]
+    }
+    return sum
+}
+console.log(suming([1, 2, 10]))
 /*
 
 9)
