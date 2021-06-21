@@ -236,7 +236,7 @@ const sumInRange = function(a, b){
         return 80
     }
  }
- console.log(sumInRange(10, 60))
+//  console.log(sumInRange(10, 60))
  /*
 18)
 
@@ -253,7 +253,29 @@ this would be a simple "Stefano".
 this would be a "DiegoRiccardo".
 34 has four factors: 1, 2, 17, and 34.
 this would be "34".
-
+*/
+const numToStr = function(a){
+    let factors = []
+    for (let i=0; i<a; i++){
+        if (a%i === 0){
+            factors.push(i)
+        }
+    }
+     if (factors.includes(3) && factors.includes(5)){
+        return "DiegoRiccardo"
+    }
+     else if (factors.includes(3)){
+        return "Diego"
+    } else if (factors.includes(5)){
+        return "Riccardo"
+    } else if (factors.includes(7)){
+        return "Stefano"
+    }  else {
+        return a
+    }
+ }
+ console.log(numToStr(30))
+ /*
 19)
 Create a function that given a phrase returns its acronym, like British Broadcasting Corporation returns BBC
 
