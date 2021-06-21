@@ -155,7 +155,7 @@ const angle = function(ab){
     return "reflex angle"
    } 
 }
-console.log(angle(182))
+// console.log(angle(182))
 /*
 
 Types of angles:
@@ -167,11 +167,39 @@ Types of angles:
 13)
 
 Create a function to find the index of the greatest element of a given array of integers
-
+*/
+const bigIndex = function(arr){
+    let count = 0;
+    for (let i=0; i<arr.length; i++){
+        if (arr[i]>count){
+            count = arr[i]
+        }
+    }
+    return arr.indexOf(count)
+}
+// console.log(bigIndex([2, 15, 9]))
+/*
 14)
 
 Create a function to get the largest even number from an array of integers.
-
+*/
+const bigEvenNum = function(arr){
+    let even = [];
+    let count = 0;
+    for (let i=0; i<arr.length; i++){
+        if (arr[i]%2 === 0){
+            even.push(arr[i])
+        }
+    }
+    for (let i=0; i<even.length; i++){
+        if (even[i]>count){
+            count = even[i]
+        }
+    }
+    return count
+}
+console.log(bigEvenNum([2, 15, 9, 14, 41, 22, 102, 606]))
+/*
 15)
 
 Create a function to check from two given integers, whether one is positive and another one is negative.
