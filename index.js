@@ -28,12 +28,12 @@ function check (a, b){
 3)
 Create a function to remove a character at the specified position of a given string and return the new string.
 */
-function removing(a, b, c){
-     let str = c;
-     return [...str].splice(a,b).join("")
-    
+function removing(a, b){
+     let str = b;
+     str = str.slice(0,a) + str.slice(a+1)
+     return str
 }
-// console.log(removing(1, 2, "hello Js"))
+console.log(removing(4, "hello Js"))
 /*
 
 4)
@@ -105,13 +105,22 @@ function arrCheck (a){
         return "No its not"
     }
 }
-console.log(arrCheck([2, 2]))
+// console.log(arrCheck([2, 2]))
 /*
 
 10)
 
 Create a function to test whether an array of integers of length 2 does not contain 1 or a 3
-
+*/
+function arrCheck (a){
+    if ((a[0] != 1 || a[1]!=1)||(a[0]!=3 || a[1]!=3)){
+        return "yes it is not here"
+    } else {
+        return "its here"
+    }
+}
+// console.log(arrCheck([1, 3]))
+/*
 11)
 
 Create a function to find the longest string from a given array of strings.
