@@ -198,16 +198,32 @@ const bigEvenNum = function(arr){
     }
     return count
 }
-console.log(bigEvenNum([2, 15, 9, 14, 41, 22, 102, 606]))
+// console.log(bigEvenNum([2, 15, 9, 14, 41, 22, 102, 606]))
 /*
 15)
 
 Create a function to check from two given integers, whether one is positive and another one is negative.
-
+*/
+const positiveOrNegative = function(a, b){
+   if (a>0 && b<0){
+       return "one +ve and the other is -ve"
+   } else if (a<0 && b>0){
+    return "one +ve and the other is -ve"
+   } else {
+       return "they both must be +ve or -ve at the same time"
+   }
+}
+// console.log(positiveOrNegative(-4, 5))
+/*
 16)
 
 Create a function to create new string with first 3 characters are in lower case and the others in upper case. If the string length is less than 3 convert all the characters in upper case. 
-
+*/
+const firstLowerCase = function(str){
+    return str.slice(0, 3).toLowerCase() + str.slice(3).toUpperCase()
+ }
+ console.log(firstLowerCase("yonatan"))
+ /*
 17)
 
 Create a function to calculate the sum of the two given integers, If the sum is in the range 50..80 return 65 other wise return 80.
